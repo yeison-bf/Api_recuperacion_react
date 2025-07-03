@@ -2,12 +2,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const db = require("./db");
-
+const cors = require('cors')
 const app = express();
 const PORT = 3000;
 
 app.use(bodyParser.json());
-
+app.use(cors())
 // Crear tablas automáticamente al iniciar
 (async () => {
     try {
